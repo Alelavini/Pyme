@@ -1,0 +1,17 @@
+npm init
+npm install express
+npm i nodemon -D
+npm i sequelize sqlite3
+npm i cors
+npm install dotenv
+npm i jsonwebtoken
+npm i -g jest
+npm i --save-dev supertest
+
+run --> npm run dev
+
+git remote add origin https://github.com/Alelavini/Pyme.git
+git branch -M main
+git commit -m "Comienzo"
+git push -u origin main
+
