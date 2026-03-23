@@ -1,7 +1,7 @@
 {
   "permissions": {
     "allow": [
-      "Read(//c/Users/Nicolas/Desktop/**)",
+      "Read(//c/Users/Alejandro/Desktop/**)",
       "Bash(npm create:*)"
     ]
   }
