@@ -10,8 +10,3 @@ npm i --save-dev supertest
 
 run --> npm run dev
 
-git remote add origin https://github.com/Alelavini/Pyme.git
-git branch -M main
-git commit -m "Comienzo"
-git push -u origin main
-
