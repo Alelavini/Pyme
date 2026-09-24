@@ -1,0 +1,14 @@
+services:
+  pymes:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      FRONTEND_URL: http://localhost:3000
+      ACCESS_TOKEN_SECRET: ${ACCESS_TOKEN_SECRET:-demo-access-secret-cambiar}
+      REFRESH_TOKEN_SECRET: ${REFRESH_TOKEN_SECRET:-demo-refresh-secret-cambiar}
+    volumes:
+      - pymes-data:/app/backend/.data
+
+volumes:
+  pymes-data:

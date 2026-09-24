@@ -1,0 +1,27 @@
+{
+  "name": "pymes",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sistema full-stack de gestión de inventario para pymes: React 19 + Express 5 + Sequelize + JWT",
+  "author": "Alejandro Lavini",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alelavini/Pyme.git"
+  },
+  "scripts": {
+    "setup": "npm install && npm --prefix backend install && npm --prefix frontend install",
+    "dev": "concurrently -k -n api,web -c blue,magenta \"npm --prefix backend run dev\" \"npm --prefix frontend run dev\"",
+    "build": "npm --prefix frontend run build",
+    "start": "npm run build && npm --prefix backend start",
+    "test": "npm --prefix backend test",
+    "lint": "npm --prefix frontend run lint",
+    "db:reset": "npm --prefix backend run db:reset"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "pymes-backend",
+  "version": "1.0.0",
+  "description": "API REST de gestión de inventario: Express 5 + Sequelize + SQLite + JWT",
+  "homepage": "https://github.com/Alelavini/Pyme#readme",
+  "bugs": {
+    "url": "https://github.com/Alelavini/Pyme/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alelavini/Pyme.git"
+  },
+  "license": "MIT",
+  "author": "Alejandro Lavini",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "db:reset": "node -e \"require('fs').rmSync(require('./config').dbStorage,{force:true})\" && node models/inicializarBase.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.3.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "sequelize": "^6.37.8",
+    "sqlite3": "^6.0.1"
+  },
+  "devDependencies": {
+    "jest": "^30.5.2",
+    "nodemon": "^3.1.14",
+    "supertest": "^7.2.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "setupFiles": [
+      "<rootDir>/test/setup/env.js"
+    ],
+    "globalSetup": "<rootDir>/test/setup/globalSetup.js",
+    "testMatch": [
+      "**/test/**/*.test.js"
+    ],
+    "testTimeout": 10000
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
